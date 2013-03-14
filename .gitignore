@@ -13,3 +13,17 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+test/.DS_Store
+
+db/.DS_Store
+
+config/.DS_Store
+
+app/.DS_Store
+
+app/assets/.DS_Store
+
+app/assets/stylesheets/.DS_Store
+
+app/assets/stylesheets/boilerplate/.DS_Store
