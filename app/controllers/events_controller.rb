@@ -44,7 +44,7 @@ class EventsController < ApplicationController
   # POST /events.json
   def create
     @organization = Organization.find(params[:organization_id])
-    @event = @organization.Events.new(params[:event])
+    @event = @organization.events.new(params[:event])
 
     respond_to do |format|
       if @event.save
