@@ -15,6 +15,12 @@
   <%= @organization.website %>
 </p>
 
-<%= link_to 'New Event', new_organization_event_path(@organization) %>
+ <% @organization.events.each do |event| %>
+ <%= link_to event.name, organization_event_path(@organization) %>
+ <% end %>
+
+ <br>
+
+<%= link_to 'New Event', new_organization_event_path(@organization) %> |
 <%= link_to 'Edit', edit_organization_path(@organization) %> |
 <%= link_to 'Back', organizations_path %>
