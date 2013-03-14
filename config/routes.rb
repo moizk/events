@@ -2,7 +2,9 @@ Events::Application.routes.draw do
   resources :events
 
 
-  resources :organizations
+  resources :organizations do 
+    resources :events
+  end
 
 
   # The priority is based upon order of creation:
