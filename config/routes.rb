@@ -1,4 +1,5 @@
 Events::Application.routes.draw do
+
   resources :events
 
 
@@ -6,7 +7,7 @@ Events::Application.routes.draw do
     resources :events
   end
 
-
+  root to: 'organizations#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
