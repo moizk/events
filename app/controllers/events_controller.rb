@@ -61,7 +61,7 @@ class EventsController < ApplicationController
   # PUT /events/1.json
   def update
     @event = Event.find(params[:id])
-    @organization = @organization.event
+    @organization = @event.organization
 
     respond_to do |format|
       if @event.update_attributes(params[:event])
