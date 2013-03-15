@@ -13,8 +13,25 @@
  */
 @import "bourbon";
 @import "neat";
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
 
 
 div.container {
   @include outer-container;
+}
+
+div.navigation {
+	height: 160px;
+	width: 100%;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	border-top: 4px solid black;	
+	a {
+		color: black;
+		&:hover {
+			color: black;
+			text-decoration: none;
+		}
+	}
 }
