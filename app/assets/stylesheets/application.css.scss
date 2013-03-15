@@ -15,10 +15,26 @@
 @import "neat";
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-
+body  {
+	background-color: #eceef1;
+}
 
 div.container {
-  @include outer-container;
+	@include outer-container;
+	background-color: white;
+	padding-bottom: 20px;
+}
+
+div.row {
+	 @include span-columns(12);
+}
+
+div.one_third {
+	@include span-columns(4);
+}
+
+div.one_eighth {
+	@include span-columns(8);
 }
 
 div.navigation {
@@ -26,7 +42,7 @@ div.navigation {
 	width: 100%;
 	font-family: 'Montserrat', sans-serif;
 	text-align: center;
-	border-top: 4px solid black;	
+	border-top: 4px solid black;
 	a {
 		color: black;
 		&:hover {
