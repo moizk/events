@@ -1,24 +1,18 @@
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Website</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @organizations.each do |organization| %>
-  <tr>
-    <td><%= organization.name %></td>
-    <td><%= organization.description %></td>
-    <td><%= organization.website %></td>
-    <td><%= link_to 'Show', organization %></td>
-    <td><%= link_to 'Edit', edit_organization_path(organization) %></td>
-    <td><%= link_to 'Destroy', organization, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  <div class="row org-row">
+    <div class="one_eighth">
+      <h3><%= organization.name %></h3>
+      <p><%= organization.description %></p>
+      <%= organization.website %>
+    </div>
+    <div class="one_third">
+      <h3>Actions</h3>
+      <%= link_to 'Show', organization %><br>
+      <%= link_to 'Edit', edit_organization_path(organization) %><br>
+      <%= link_to 'Destroy', organization, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  </div>
 <% end %>
-</table>
 
 <br />
 
