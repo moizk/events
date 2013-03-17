@@ -22,7 +22,6 @@ body  {
 div.container {
 	@include outer-container;
 	background-color: white;
-	padding-bottom: 20px;
 }
 
 div.row {
@@ -33,7 +32,7 @@ div.one_third {
 	@include span-columns(4);
 }
 
-div.one_eighth {
+div.two_thirds {
 	@include span-columns(8);
 }
 
@@ -50,4 +49,9 @@ div.navigation {
 			text-decoration: none;
 		}
 	}
+}
+
+div.footer {
+	padding-top: 30px;
+	border-bottom: 4px solid black;
 }
