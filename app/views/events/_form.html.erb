@@ -29,11 +29,11 @@
   </div>
   <div class="field">
     <%= f.label :event_start_time %><br />
-    <%= f.datetime_select :event_start_time %>
+    <%= f.text_field :event_start_time, class: "timepicker", placeholder: "e.g. 4pm or 8pm" %>
   </div>
   <div class="field">
     <%= f.label :event_end_time %><br />
-    <%= f.datetime_select :event_end_time %>
+    <%= f.text_field :event_end_time, class: "timepicker" %>
   </div>
   <div class="actions">
     <%= f.submit %>
