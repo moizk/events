@@ -1,7 +1,11 @@
 <% @events.each do |event| %>
     <div class="row event-row text-center">
         <div class="one_fourth">
-            <h3>Where:</h3>
+            <h3>Who</h3>
+            <%= event.organization.name %>
+        </div>
+        <div class="one_fourth">
+            <h3>What</h3>
             <p>
                 <%= link_to event.name, organization_event_path(event.organization, event) %><br>
                 <small><%= link_to 'Edit', edit_organization_event_path(event.organization, event) %> |
@@ -9,16 +13,12 @@
             </p>
         </div>
         <div class="one_fourth">
-            <h3>Who</h3>
-            <%= event.organization.name %>
-        </div>
-        <div class="one_fourth">
-            <h3>When: </h3>
-            <p><%= event.event_start_date.strftime('%A') %> at <%= event.event_start_time.strftime('%l%P') %></p>
-        </div>
-        <div class="one_fourth">
             <h3>Where</h3>
             <p><%= event.location %></p>
+        </div>
+        <div class="one_fourth">
+            <h3>When</h3>
+            <p><%= event.event_start_date.strftime('%A') %> at <%= event.event_start_time.strftime('%l%P') %></p>
         </div>
     </div>
 <% end %>
