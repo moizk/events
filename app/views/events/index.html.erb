@@ -1,18 +1,24 @@
 <% @events.each do |event| %>
     <div class="row event-row text-center">
-        <div class="one_third">
-            <h3><%= event.name %></h3>
+        <div class="one_fourth">
+            <h3>Where:</h3>
+            <p>
+                <%= link_to event.name, organization_event_path(event.organization, event) %><br>
+                <small><%= link_to 'Edit', edit_organization_event_path(event.organization, event) %> |
+                <%= link_to 'Destroy', organization_event_path(event.organization, event), method: :delete, data: { confirm: 'Are you sure?' } %></small>
+            </p>
+        </div>
+        <div class="one_fourth">
+            <h3>Who</h3>
+            <%= event.organization.name %>
+        </div>
+        <div class="one_fourth">
+            <h3>When: </h3>
+            <p><%= event.event_start_date.strftime('%A') %> at <%= event.event_start_time.strftime('%l%P') %></p>
+        </div>
+        <div class="one_fourth">
+            <h3>Where</h3>
             <p><%= event.location %></p>
-        </div>
-        <div class="one_third">
-            <h3>Date: </h3><%= event.event_start_date %><br>
-            <h3>Time: </h3><%= event.event_start_time %><br>
-        </div>
-        <div class="one_third">
-            <h3>Actions</h3>
-            <%= link_to 'Show', organization_event_path(event.organization, event) %><br>
-            <%= link_to 'Edit', edit_organization_event_path(event.organization, event) %><br>
-            <%= link_to 'Destroy', organization_event_path(event.organization, event), method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
     </div>
 <% end %>

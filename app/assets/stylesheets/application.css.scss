@@ -32,6 +32,16 @@ div.one_third {
 	@include span-columns(4);
 }
 
+div.one_fourth {
+	@include span-columns(3);
+}
+
+@media screen and (max-width: 480px) {
+	div.one_fourth {
+		@include span-columns(12);
+	}
+	}
+
 div.two_thirds {
 	@include span-columns(8);
 }
@@ -53,5 +63,6 @@ div.navigation {
 
 div.footer {
 	padding-top: 30px;
+	padding-bottom: 30px;
 	border-bottom: 4px solid black;
 }
