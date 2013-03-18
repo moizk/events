@@ -1,8 +1,9 @@
 <% @events.each do |event| %>
     <div class="row event-row text-center">
+        <%= image_tag 'bruno.jpg' %>
         <div class="one_fourth">
             <h3>Who</h3>
-            <%= event.organization.name %>
+            <%= link_to event.organization.name, event.organization %>
         </div>
         <div class="one_fourth">
             <h3>What</h3>
