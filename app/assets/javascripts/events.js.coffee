@@ -5,3 +5,9 @@
 $(() ->
 	$('.timepicker').timepicker()
 )
+
+$("#today").affix({
+    offset: 300
+});
+
+
