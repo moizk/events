@@ -6,8 +6,6 @@ $(() ->
 	$('.timepicker').timepicker()
 )
 
-$("#today").affix({
-    offset: 300
-});
+$("#today").affix({});
 
 
