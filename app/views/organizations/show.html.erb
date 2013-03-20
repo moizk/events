@@ -1,26 +1,30 @@
-<p id="notice"><%= notice %></p>
+<div class="five_sixth ">
+	<div class="page-header">
+		<span class="right">
+			<%= link_to 'New Event', new_organization_event_path(@organization), class: "btn btn-inverse" %>
+			<%= link_to 'Edit', edit_organization_path(@organization), class: "btn btn-warning" %>
+			<%= link_to 'Website', @organization.website, class: "btn" %>
+		</span>
+		<h1><%= @organization.name %></h1>
+		<small><%= @organization.description %></small>
+	</div>
+	<br>
 
-<p>
-  <b>Name:</b>
-  <%= @organization.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @organization.description %>
-</p>
-
-<p>
-  <b>Website:</b>
-  <%= @organization.website %>
-</p>
-
- <% @organization.events.each do |event| %>
- <%= link_to event.name, organization_event_path(@organization) %>
- <% end %>
-
- <br>
-
-<%= link_to 'New Event', new_organization_event_path(@organization) %> |
-<%= link_to 'Edit', edit_organization_path(@organization) %> |
-<%= link_to 'Back', organizations_path %>
+	 <% @organization.events.each do |event| %>
+	 	<div class="row event-row text-center">
+	 		<%= image_tag 'bruno.jpg' %>
+	 		<div class="one_third">
+	 			<h3>What</h3>
+	 			<%= link_to event.name, organization_event_path(@organization) %>
+	 		</div>
+	 		<div class="one_third">
+	 			<h3>Where</h3>
+	 			<%= event.location %>
+	 		</div>
+	 		<div class="one_third">
+	 			<h3>When</h3>
+	 			<%= event.event_start_date.strftime('%A') %> at <%= event.event_start_time.strftime('%l%P') %>
+	 		</div>
+	 	</div>
+	 <% end %>
+</div>

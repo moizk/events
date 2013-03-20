@@ -47,10 +47,15 @@ div.updateform {
 	div.one_fourth {
 		@include span-columns(12);
 	}
-	}
+}
 
 div.two_thirds {
 	@include span-columns(8);
+}
+
+div.five_sixth {
+	@include span-columns(10);
+	@include shift(1);
 }
 
 div.navigation {
