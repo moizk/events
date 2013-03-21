@@ -1,7 +1,6 @@
-
+<div id="today" data-spy="affix" data-offset-top="200" class="stickyicky" ><h2>Today</h2></div>
 <% @events.each do |event| %>
     <div class="row event-row text-center">
-        <div id="today" data-spy="affix" data-offset-top="200" class="stickyicky" ><h2>Today</h2></div>
         <%= image_tag 'bruno.jpg' %>
         <div class="one_fourth">
             <h3>Who</h3>
@@ -11,8 +10,6 @@
             <h3>What</h3>
             <p>
                 <%= link_to event.name, organization_event_path(event.organization, event) %><br>
-                <small><%= link_to 'Edit', edit_organization_event_path(event.organization, event) %> |
-                <%= link_to 'Destroy', organization_event_path(event.organization, event), method: :delete, data: { confirm: 'Are you sure?' } %></small>
             </p>
         </div>
         <div class="one_fourth">
