@@ -7,13 +7,14 @@ body {
 }
 
 a {
-  color: #4d90fe;
+  color: #222;
   text-decoration: none;
+  font-weight: 600;
 }
 
 a:hover {
-  color: #0161fd;
-  text-decoration: underline;
+  color: #DB380E;
+  text-decoration: none;
 }
 
 a:active {

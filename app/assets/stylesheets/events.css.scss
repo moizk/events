@@ -11,6 +11,7 @@ div.event-row {
 	h3 {
 	 text-transform: uppercase;
 	 font-size: 30px;
+	 color: #333333;
 	 font-family: 'Oswald', sans-serif;
 	 font-weight: 700;
 	}
@@ -22,11 +23,12 @@ div.event-row {
   right: 0;
   left: 0;
   box-shadow: rgba(0,0,0,0.2) 0 1px 2px;
-  opacity: .7;
+  opacity: .9;
 }
 
 .stickyicky {
 	background-color: white;
 	width: 100%;
+	text-align: center;
 }
 
