@@ -6,6 +6,10 @@ $(() ->
 	$('.timepicker').timepicker()
 )
 
+$(() ->
+	$('.datepicker').pickadate()
+)
+
 $("#today").affix({});
 
 
