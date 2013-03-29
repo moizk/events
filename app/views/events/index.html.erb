@@ -1,6 +1,12 @@
-<div id="today" data-spy="affix" data-offset-top="200" class="stickyicky" ><h2>Today</h2></div>
+<div id="today" data-spy="affix" data-offset-top="200" class="stickyicky" >
+    <a href="#now"><h2>Today</h2></a>
+    <span>-</span>
+    <a href="#tomorrow"><h2>Tomorrow</h2></a>
+    <span>-</span>
+    <a href="#later"><h2>This Week</h2></a>
+</div>
 <% @events_today.each do |event| %>
-    <div class="row event-row text-center">
+    <div class="row event-row text-center" id="now">
         <%= image_tag 'bruno.jpg' %>
         <div class="one_fourth">
             <h3>Who</h3>
@@ -23,10 +29,32 @@
     </div>
 <% end %>
 
-
-<div class="stickyicky" ><h2>Tommorow</h2></div>
 <% @events_tomorrow.each do |event| %>
-    <div class="row event-row text-center">
+    <div class="row event-row text-center" id="tomorrow">
+        <%= image_tag 'bruno.jpg' %>
+        <div class="one_fourth">
+            <h3>Who</h3>
+            <%= link_to event.organization.name, event.organization %>
+        </div>
+        <div class="one_fourth">
+            <h3>What</h3>
+            <p>
+                <%= link_to event.name, organization_event_path(event.organization, event) %><br>
+            </p>
+        </div>
+        <div class="one_fourth">
+            <h3>Where</h3>
+            <p><%= event.location %></p>
+        </div>
+        <div class="one_fourth">
+            <h3>When</h3>
+            <p><%= event.event_start_date.strftime('%A') %> at <%= event.event_start_time.strftime('%l%P') %></p>
+        </div>
+    </div>
+<% end %>
+
+<% @events_this_week.each do |event| %>
+    <div class="row event-row text-center" id="later">
         <%= image_tag 'bruno.jpg' %>
         <div class="one_fourth">
             <h3>Who</h3>

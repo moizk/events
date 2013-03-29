@@ -30,5 +30,13 @@ div.event-row {
 	background-color: white;
 	width: 100%;
 	text-align: center;
+	h2 {
+		display: inline-block;
+
+	}
+	span {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
 }
 
