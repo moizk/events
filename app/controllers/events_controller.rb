@@ -2,7 +2,9 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    @events_today = Event.today
+    @events_tomorrow = Event.tomorrow
+    @events_this_week = Event.this_week
 
     respond_to do |format|
       format.html # index.html.erb
