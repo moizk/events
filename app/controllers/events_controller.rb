@@ -16,7 +16,7 @@ class EventsController < ApplicationController
   # GET /events/1.json
   def show
     @organization = Organization.find(params[:organization_id])
-    @event = Event.find(params[:id])
+    @event = @organization.events.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
